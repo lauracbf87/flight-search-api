@@ -8,7 +8,6 @@ package com.nagarro.flight.search.api.dao;
 import com.nagarro.flight.search.api.entity.FlightInfo;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,7 +15,7 @@ import org.springframework.stereotype.Repository;
  * @author Laura.Barragan
  */
 @Repository
-public interface FlightSearchRepository extends JpaRepository<String, FlightInfo> {
+public interface FlightSearchRepository extends JpaRepository<FlightInfo, String> {
 
 //    @Query(value="SELECT FLIGHT_NO, DEP_LOC, ARR_LOC, VALID_TILL, FLIGHT_TIME, FLIGHT_DUR, "
 //            + "FARE, SEAT_AVAILABILITY, CLASS FROM FLIGHT_INFO "
