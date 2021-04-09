@@ -40,9 +40,7 @@ public class FlightSearchController {
     @CrossOrigin(origins="*")
     @RequestMapping(value="/flightSearch", method = RequestMethod.POST)
     public ResponseEntity<List<FlightInfo>> flightSearch(@RequestBody FlightInfoQuery query) {
-        List<FlightInfo> results = new ArrayList<>();
-        
-        results = service.flightSearch(query);
+        List<FlightInfo> results = service.flightSearch(query);
         
         ResponseEntity<List<FlightInfo>> response = ResponseEntity.ok(results);
         return response;
